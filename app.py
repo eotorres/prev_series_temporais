@@ -17,7 +17,7 @@ st.markdown("<h1 style='text-align: center;'>📈 Previsão automatizada de sér
 
 """
 Este aplicativo de dados usa a biblioteca de código aberto do Facebook Prophet, para gerar automaticamente valores de previsão futura a partir de um conjunto de dados importado.
-Você poderá importar seus dados de um arquivo CSV e o separador precisa ser por ';', visualizar tendências e recursos, analisar o desempenho da previsão e, finalmente, baixar a previsão criada 😵
+Você poderá importar seus dados de um arquivo CSV e o separador precisa ser por ',', visualizar tendências e recursos, analisar o desempenho da previsão e, finalmente, baixar a previsão criada 😵
 """
 
 """
@@ -27,11 +27,11 @@ df = st.file_uploader('Importe o arquivo csv da série temporal aqui. As colunas
 st.info(
             f"""
                 👆 Carregue primeiro um arquivo .csv. Exemplo para experimentar:  
-                [peyton_manning_wiki_ts.csv](https://raw.githubusercontent.com/zachrenwick/streamlit_forecasting_app/master/example_data/example_wp_log_peyton_manning.csv)
+                [peyton_manning_wiki_ts.csv](https://github.com/eotorres/prev_series_temporais/blob/main/example_data/example_wp_log_peyton_manning.csv)
                 """
         )
 if df is not None:
-    data = pd.read_csv(df,sep=';')
+    data = pd.read_csv(df,sep=',')
     data['ds'] = pd.to_datetime(data['ds'],errors='coerce')     
     st.write(data)    
     max_date = data['ds'].max()    
