@@ -27,7 +27,7 @@ df = st.file_uploader('Importe o arquivo csv da série temporal aqui. As colunas
 st.info(
             f"""
                 👆 Carregue primeiro um arquivo .csv. Exemplo para experimentar:  
-                [peyton_manning_wiki_ts.csv](https://github.com/eotorres/prev_series_temporais/blob/main/example_data/example_wp_log_peyton_manning.csv)
+                [peyton_manning_wiki_ts.csv](https://github.com/eotorres/prev_series_temporais/blob/main/example_data/vendas.csv)
                 """
         )
 if df is not None:
